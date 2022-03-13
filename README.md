@@ -1,2 +1,2 @@
 # 4L-WEB-7-11-Napoles-and-Castillo
-WEB project for Software Development 244 &amp; WEB 241
+Welcome to 7/11 website - WEB project for Software Development 244 (Mr. Agbay) &amp; WEB 241 (Mr. Loquinario)
