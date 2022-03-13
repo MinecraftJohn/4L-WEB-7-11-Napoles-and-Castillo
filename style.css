@@ -61,7 +61,7 @@
     font-weight: 600;
     width: 900px;
     max-width: 95%;
-    font-size: 38px;
+    font-size: 32px;
     margin: auto;
 }
 .titleSubtitle {
@@ -72,14 +72,181 @@
     font-weight: 500;
     margin: 18px auto 0;
 }
+.registrationFormTitle {
+    font-size: 32px;
+    font-weight: 600;
+    color: #ef2b2f;
+}
 .registrationFormSection {
-    background-color: aquamarine;
-    width: 552px;
+    width: 564px;
     max-width: 95%;
-    margin: auto;
-    margin-top: 44px;
+    margin: 44px auto;
+    position: relative;
 }
 .registrationFormContainer {
-    width: 552px;
+    margin-top: 16px;
+    width: 564px;
     max-width: 95%;
+    background-color: white;
+    box-shadow: 4px 4px 10px 5px rgba(0,0,0,.33);
+    border-radius: 6px;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.registrationFormLabel {
+    font-size: 22px;
+    font-weight: 500;
+    width: 280px;
+}
+.registrationFormInput {
+    background-color: #ededed;
+    border: none;
+    border-radius: 2px;
+    height: 48px;
+    margin: 0 0 16px 18px;
+    width: 300px;
+    padding: 16px;
+    font-size: 22px;
+    font-weight: 500;
+    outline: none;
+}
+.registrationFormDate {
+    position: relative;
+}
+.registrationFormDateLabel {
+    position: absolute;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 36px;
+    right: 322px;
+    width: 150px;
+    text-align: end;
+}
+.registrationFormDate1 {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+.registrationFormDate1 select {
+    background-color: #ededed;
+    border: none;
+    border-radius: 8px;
+    height: 36px;
+    width: 32%;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 8px;
+    outline: none;
+    margin-bottom: 16px;
+}
+.registrationFormDateArrow {
+    position: absolute;
+    pointer-events: none;
+    right: 2px;
+    top: 15px;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #ef6c00;
+    background-color: #ededed;
+}
+.registrationFormDateArrow2 {
+    right: 104px;
+}
+.registrationFormDateArrow3 {
+    right: 206px;
+}
+.registrationFormLabelFemale {
+    margin: 0 36px 0 6px;
+    position: relative;
+    cursor: pointer;
+}
+#registrationFormFemale {
+    width: 0;
+    height: 0;
+}
+#registrationFormMale {
+    width: 0;
+    height: 0;
+}
+.registrationFormLabelMale {
+    margin: 0 102px 0 6px;
+    position: relative;
+    cursor: pointer;
+}
+.registrationFormLabelGender {
+    margin: 0 38px 0 0;
+}
+.registrationFormFemale {
+    position: absolute;
+    top: 5px;
+    left: -26px;
+    background-color: #ededed;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+}
+.registrationFormMale {
+    position: absolute;
+    top: 5px;
+    left: -26px;
+    background-color: #ededed;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+}
+.registrationFormLabelFemale input:checked ~ .registrationFormFemale {
+    background-color: #ef6c00;
+    border: #ededed 5px solid;
+}
+.registrationFormLabelMale input:checked ~ .registrationFormMale {
+    background-color: #ef6c00;
+    border: #ededed 5px solid;
+}
+.registrationFormCheckContainer {
+    position: relative;
+}
+#registrationFormCheck {
+    position: absolute;
+    height: 0;
+    width: 0;
+}
+.registrationFormCheck {
+    position: absolute;
+    top: 16px;
+    left: -42px;
+    height: 20px;
+    width: 20px;
+    border-radius: 4px;
+    background-color: #ededed;
+}
+.registrationFormCheckLabel input:checked ~ .registrationFormCheck {
+    background-color: #ededed;
+    border: #ef6c00 7px solid;
+}
+.registrationFormCheckLabel {
+    margin-top: 16px;
+    font-weight: 600;
+    font-size: 15px;
+    width: 300px;
+    display: inline-block;
+    cursor: pointer;
+}
+.registrationFormSubmit {
+    background-color: #ef2b2f;
+    font-size: 28px;
+    font-weight: 400;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0 64px;
+    line-height: 60px;
+    margin-top: 28px;
+    cursor: pointer;
+}
+.registrationCards {
+    position: absolute;
+    bottom: -72px;
+    left: -168px;
 }
