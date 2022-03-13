@@ -80,7 +80,7 @@
 .registrationFormSection {
     width: 564px;
     max-width: 95%;
-    margin: 44px auto;
+    margin: 44px auto 102px;
     position: relative;
 }
 .registrationFormContainer {
@@ -249,4 +249,32 @@
     position: absolute;
     bottom: -72px;
     left: -168px;
+}
+.footerSection {
+    background-color: #006b41;
+    width: 100%;
+}
+.footerWrapper {
+    width: 1064px;
+    max-width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 0;
+}
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+}
+.footerTitle {
+    font-size: 22px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 14px;
+}
+.footerLink {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
 }
