@@ -2,9 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .headerContainer {
     display: flex;
+    flex-direction: column;
     background-color: rgb(255, 255, 255);
 }
 .headerBanner {
@@ -18,4 +20,33 @@
 }
 .headerBanner img {
     background-color: #fff;
+}
+.navigationSection {
+    position: relative;
+}
+.navigationContainer {
+    border: #006b41 2px solid;
+    margin: auto;
+    width: 1064px;
+    max-width: 95%;
+    display: flex;
+    justify-content: space-around;
+}
+.navigationList {
+    font-size: 22px;
+    text-decoration: none;
+    color: #006b41;
+    margin: 18px 0px;
+    position: relative;
+}
+.navigationListActive {
+    position: absolute;
+    left: 50%;
+    top: 34px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 11px solid #006b41;
 }
