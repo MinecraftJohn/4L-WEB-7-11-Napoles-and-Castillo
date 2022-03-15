@@ -12,17 +12,45 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="headerContainer">
-        <div class="headerBanner">
-            <img src="assets/NXTLVL_WEBDEB_711_Banner.png" alt="7 eleven banner">
+    <nav class="navigationMobileSection">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" class="navigationMobileMenuContainer">
+            <title>Menu</title>
+            <rect width="48" height="48" fill="none"/>
+            <rect width="48" height="8" fill="#fff"/>
+            <rect y="40" width="48" height="8" fill="#fff"/>
+            <rect y="20" width="48" height="8" fill="#fff"/>
+        </svg>
+        <div class="navigationMobileSearchContainer">
+            <input type="text" class="navigationMobileSearchInput">
+            <svg width="20" height="20" viewBox="0 0 49 49" fill="none" class="navigationMobileSearchIcon">
+                <title>Search</title>
+                <rect width="48" height="48" fill="none"/>
+                <circle cx="21" cy="21" r="19.5" stroke="#fff" stroke-width="4"/>
+                <rect x="34" y="36.1213" width="3" height="17.1443" transform="rotate(-45 34 36.1213)" fill="#fff"/>
+            </svg>
         </div>
-        <div class="navigationSection">
-            <div class="navigationContainer">
-                <a href="test1" class="navigationList">Praesentium</a>
-                <a href="test2" class="navigationList">Voluptatum<div class="navigationListActive"></div></a>
-                <a href="test3" class="navigationList">Dignissimos</a>
-                <a href="test4" class="navigationList">Blanditiis</a>
-            </div>
+    </nav>
+    <header class="headerSection">
+        <div class="headerContainer">
+            <img src="assets/logo.png" alt="7/11 Banner Logo" class="headerLogo">
+        </div>
+        <div class="headerNavigationContainer">
+            <a href="#" class="headerLink">
+                Praesentium
+                <div class="headerLinkHover"></div>
+            </a>
+            <a href="#" class="headerLink">
+                Voluptatum
+                <div class="headerLinkHover headerLinkActive"></div>
+            </a>
+            <a href="#" class="headerLink">
+                Dignissimos
+                <div class="headerLinkHover"></div>
+            </a>
+            <a href="#" class="headerLink">
+                Blanditiis
+                <div class="headerLinkHover"></div>
+            </a>
         </div>
     </header>
     <div class="titleSection">
@@ -32,82 +60,91 @@
     <div class="registrationFormSection">
         <h1 class="registrationFormTitle">Registration Form</h1>
         <form class="registrationFormContainer">
-            <div>
-                <label for="registrationFormName" class="registrationFormLabel">Name</label>
-                <input type="text" id="registrationFormName" class="registrationFormInput">
+            <div class="registrationFormInputContainer">
+                <p class="registrationFormInputLabel">Name</p>
+                <input type="text" class="registrationFormInputInput">
             </div>
-            <div>
-                <label for="registrationFormEmail" class="registrationFormLabel">Email</label>
-                <input type="email" id="registrationFormEmail" class="registrationFormInput">
+            <div class="registrationFormInputContainer">
+                <p class="registrationFormInputLabel">Email</p>
+                <input type="email" class="registrationFormInputInput">
             </div>
-            <div>
-                <label for="registrationFormNumber" class="registrationFormLabel">Mobile Number</label>
-                <input type="text" id="registrationFormNumber" class="registrationFormInput">
+            <div class="registrationFormInputContainer registrationFormMobileContainer">
+                <p class="registrationFormInputLabel">Mobile Number</p>
+                <input type="text" class="registrationFormInputInput">
             </div>
-            <div class="registrationFormDate">
-                <div class="registrationFormDateLabel">Date of Birth</div>
-                <div class="registrationFormDate1">
-                    <div class="registrationFormDateArrow"></div>
-                    <div class="registrationFormDateArrow registrationFormDateArrow2"></div>
-                    <div class="registrationFormDateArrow registrationFormDateArrow3"></div>
-                    <select name="month" id="registrationFormMonth">
-                        <option>MONTH</option>
-                        <option>January</option>
-                        <option>Februay</option>
-                        <option>March</option>
-                        <option>April</option>
-                        <option>May</option>
-                        <option>June</option>
-                        <option>July</option>
-                        <option>August</option>
-                        <option>September</option>
-                        <option>October</option>
-                        <option>November</option>
-                        <option>December</option>
-                    </select>
-                    <select name="day" id="registrationFormDay">
-                        <option>DAY</option>
-                        <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
-                        <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
-                        <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
-                        <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
-                        <option>21</option><option>22</option><option>23</option><option>24</option><option>25</option>
-                        <option>26</option><option>27</option><option>28</option><option>29</option><option>29</option>
-                        <option>30</option><option>31</option>
-                    </select>
-                    <select name="year" id="registrationFormYear">
-                        <option>YEAR</option>
-                        <option>1995</option><option>1996</option><option>1997</option><option>1998</option><option>1999</option>
-                        <option>2000</option><option>2001</option><option>2002</option><option>2003</option><option>2004</option>
-                        <option>2005</option><option>2006</option><option>2007</option><option>2008</option><option>2009</option>
-                        <option>2010</option><option>2011</option><option>2012</option><option>2013</option><option>2014</option>
-                        <option>2015</option><option>2016</option><option>2017</option><option>2018</option><option>2019</option>
-                        <option>2020</option><option>2021</option><option>2022</option>
-                    </select>
+            <div class="registrationFormDateContainer">
+                <p class="registrationFormInputLabel">Date of Birth</p>
+                <div class="registrationFormDateDatesContainer">
+                    <div class="registrationFormDateDates">
+                        <select name="month" class="registrationFormDateSelect">
+                            <option>MONTH</option>
+                            <option>January</option>
+                            <option>Februay</option>
+                            <option>March</option>
+                            <option>April</option>
+                            <option>May</option>
+                            <option>June</option>
+                            <option>July</option>
+                            <option>August</option>
+                            <option>September</option>
+                            <option>October</option>
+                            <option>November</option>
+                            <option>December</option>
+                        </select>
+                        <div class="registrationFormDateSelectArrow"></div>
+                    </div>
+                    <div class="registrationFormDateDates">
+                        <select name="day" class="registrationFormDateSelect">
+                            <option>DAY</option>
+                            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+                            <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+                            <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
+                            <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+                            <option>21</option><option>22</option><option>23</option><option>24</option><option>25</option>
+                            <option>26</option><option>27</option><option>28</option><option>29</option><option>29</option>
+                            <option>30</option><option>31</option>
+                        </select>
+                        <div class="registrationFormDateSelectArrow"></div>
+                    </div>
+                    <div class="registrationFormDateDates">
+                        <select name="year" class="registrationFormDateSelect">
+                            <option>YEAR</option>
+                            <option>1995</option><option>1996</option><option>1997</option><option>1998</option><option>1999</option>
+                            <option>2000</option><option>2001</option><option>2002</option><option>2003</option><option>2004</option>
+                            <option>2005</option><option>2006</option><option>2007</option><option>2008</option><option>2009</option>
+                            <option>2010</option><option>2011</option><option>2012</option><option>2013</option><option>2014</option>
+                            <option>2015</option><option>2016</option><option>2017</option><option>2018</option><option>2019</option>
+                            <option>2020</option><option>2021</option><option>2022</option>
+                        </select>
+                        <div class="registrationFormDateSelectArrow"></div>
+                    </div>
                 </div>
             </div>
-            <div>
-                <label for="" class="registrationFormLabel registrationFormLabelGender">Gender</label>
-                <label for="registrationFormFemale" class="registrationFormLabel registrationFormLabelFemale">
-                    Female
-                    <input type="checkbox" id="registrationFormFemale">
-                    <span class="registrationFormFemale"></span>
-                </label>
-                <label for="registrationFormMale" class="registrationFormLabel registrationFormLabelMale">
-                    Male
-                    <input type="checkbox" id="registrationFormMale">
-                    <span class="registrationFormMale"></span>
+            <div class="registrationFormInputContainer registrationFormGenderContainer">
+                <p class="registrationFormInputLabel">Gender</p>
+                <div class="registrationFormGenderCheckContainer">
+                    <label for="registrationFormGenderCheckFemale" class="registrationFormGenderFemaleContainer">
+                        Female
+                        <input type="checkbox" id="registrationFormGenderCheckFemale">
+                        <span class="registrationFormGenderCheckFemale"></span>
+                    </label>
+                    <label for="registrationFormGenderCheckMale" class="registrationFormGenderMaleContainer">
+                        Male
+                        <input type="checkbox" id="registrationFormGenderCheckMale">
+                        <span class="registrationFormGenderCheckMale"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="registrationFormEULAContainer">
+                <label for="registrationFormEULACheck">
+                    Proin sit amet lectus venenatis, consectetur magna vitae, convallis diam. Nullam iaculis.
+                    <input type="checkbox" id="registrationFormEULACheck">
+                    <span class="registrationFormEULACheck"></span>
                 </label>
             </div>
-            <div class="registrationFormCheckContainer">
-                <label for="registrationFormCheck" class="registrationFormCheckLabel">
-                    Proin sit amet lectus venenatis, consectetur 
-                    magna vitae, convallis diam. Nullam iaculis.
-                    <input type="checkbox" id="registrationFormCheck">
-                    <span class="registrationFormCheck"></span>
-                </label>
+            <div class="registrationFormSubmitContainer">
+                <input type="submit" value="Submit" class="registrationFormSubmit">
             </div>
-            <input type="submit" value="Submit" class="registrationFormSubmit">
         </form>
         <img src="assets/cards.png" alt="7 11 cards" class="registrationCards">
     </div>
@@ -134,7 +171,7 @@
                 <a href="#" class="footerLink">Velit in urna</a>
                 <a href="#" class="footerLink">Faucibus</a>
             </div>
-            <div class="footerContainer">
+            <div class="footerContainer footerContainerLast">
                 <p class="footerTitle">PLACERAT</p>
                 <a href="#" class="footerLink">Vitae</a>
                 <a href="#" class="footerLink">Convallis</a>

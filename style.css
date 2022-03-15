@@ -4,51 +4,87 @@
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
 }
-.headerContainer {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(255, 255, 255);
-}
-.headerBanner {
-    background-image: url(assets/header_bg.fw.png);
-    background-repeat: repeat-x;
-    background-position: center;
+.navigationMobileSection {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    height: 216px;
+    background-color: #bcbcbc;
+    padding: 18px 2.5%;
+}
+.navigationMobileMenuContainer {
+    cursor: pointer;
+}
+.navigationMobileSearchContainer {
+    position: relative;
+    height: 36px;
+}
+.navigationMobileSearchInput {
+    background-color: rgba(255, 255, 255, 0);
+    border: #fff 2px solid;
+    border-radius: 10px;
+    width: 300px;
+    height: 36px;
+    outline: none;
+    padding: 0 38px 0 12px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+.navigationMobileSearchIcon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.headerContainer {
+    background-image: url(assets/header_bg.fw.png);
+    width: 100%;
+    height: 128px;
+    margin-top: 48px;
     display: flex;
     justify-content: center;
 }
-.headerBanner img {
+.headerLogo {
     background-color: #fff;
+    padding: 0 18px;
 }
-.navigationSection {
-    position: relative;
-}
-.navigationContainer {
-    border: #006b41 2px solid;
-    margin: auto;
-    width: 1064px;
+.headerNavigationContainer {
+    margin: 24px auto 0;
+    width: 1008px;
     max-width: 95%;
+    border: #006b41 2px solid;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 28px;
 }
-.navigationList {
-    font-size: 22px;
-    text-decoration: none;
+.headerLink {
+    font-size: 25px;
+    font-weight: 500;
     color: #006b41;
-    margin: 18px 0px;
+    text-decoration: none;
+    padding: 18px 32px;
     position: relative;
 }
-.navigationListActive {
+.headerLinkHover {
     position: absolute;
     left: 50%;
-    top: 38px;
+    bottom: 0;
     transform: translateX(-50%);
     width: 0;
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 8px solid #006b41;
+    opacity: 0;
+    transition: opacity .3s;
+}
+.headerLinkActive {
+    opacity: 1;
+}
+.headerLink:hover .headerLinkHover {
+    opacity: 1;
 }
 .titleSection {
     width: 1064px;
@@ -72,183 +108,188 @@
     font-weight: 500;
     margin: 18px auto 0;
 }
+.registrationFormSection {
+    width: 516px;
+    max-width: 98%;
+    margin: 44px auto 102px;
+    position: relative;
+}
 .registrationFormTitle {
     font-size: 32px;
     font-weight: 600;
     color: #ef2b2f;
 }
-.registrationFormSection {
-    width: 564px;
-    max-width: 95%;
-    margin: 44px auto 102px;
-    position: relative;
-}
 .registrationFormContainer {
-    margin-top: 16px;
-    width: 564px;
-    max-width: 95%;
+    margin: 8px 0 0 0;
+    width: 516px;
+    max-width: 100%;
     background-color: white;
     box-shadow: 4px 4px 10px 5px rgba(0,0,0,.33);
     border-radius: 6px;
-    padding: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    padding: 42px;
 }
-.registrationFormLabel {
-    font-size: 22px;
-    font-weight: 500;
-    width: 280px;
-}
-.registrationFormInput {
-    background-color: #ededed;
-    border: none;
-    border-radius: 2px;
-    height: 48px;
-    margin: 0 0 16px 18px;
-    width: 300px;
-    padding: 16px;
-    font-size: 22px;
-    font-weight: 500;
-    outline: none;
-}
-.registrationFormDate {
-    position: relative;
-}
-.registrationFormDateLabel {
-    position: absolute;
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 36px;
-    right: 322px;
-    width: 150px;
-    text-align: end;
-}
-.registrationFormDate1 {
-    width: 300px;
+.registrationFormInputContainer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 23px;
 }
-.registrationFormDate1 select {
+.registrationFormInputLabel {
+    font-size: 18px;
+    font-weight: 600;
+}
+.registrationFormInputInput {
+    width: 346px;
+    height: 54px;
+    background-color: #ededed;
+    border: none;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    outline: none;
+}
+.registrationFormMobileContainer {
+    display: none;
+}
+.registrationFormDateContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 23px;
+}
+.registrationFormDateDates {
+    position: relative;
+}
+.registrationFormDateDatesContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+.registrationFormDateSelect {
     background-color: #ededed;
     border: none;
     border-radius: 8px;
-    height: 36px;
-    width: 32%;
-    font-size: 14px;
-    font-weight: 500;
-    padding-left: 8px;
+    font-size: 16px;
+    font-weight: 600;
     outline: none;
-    margin-bottom: 16px;
+    padding: 9px 16px 9px 12px;
+    cursor: pointer;
+    margin: 0 0 0 6px;
 }
-.registrationFormDateArrow {
+.registrationFormDateSelectArrow {
     position: absolute;
     pointer-events: none;
-    right: 2px;
-    top: 15px;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
     border-top: 7px solid #ef6c00;
     background-color: #ededed;
+    box-shadow: 11px 0px 0px 1px #ededed;
 }
-.registrationFormDateArrow2 {
-    right: 104px;
+.registrationFormGenderContainer {
+    display: none;
 }
-.registrationFormDateArrow3 {
-    right: 206px;
+.registrationFormGenderCheckContainer {
+    display: flex;
 }
-.registrationFormLabelFemale {
-    margin: 0 36px 0 6px;
+.registrationFormGenderFemaleContainer {
     position: relative;
-    cursor: pointer;
-}
-#registrationFormFemale {
-    width: 0;
-    height: 0;
-}
-#registrationFormMale {
-    width: 0;
-    height: 0;
-}
-.registrationFormLabelMale {
-    margin: 0 102px 0 6px;
-    position: relative;
-    cursor: pointer;
-}
-.registrationFormLabelGender {
-    margin: 0 38px 0 0;
-}
-.registrationFormFemale {
-    position: absolute;
-    top: 5px;
-    left: -26px;
-    background-color: #ededed;
-    height: 20px;
-    width: 20px;
-    border-radius: 20px;
-}
-.registrationFormMale {
-    position: absolute;
-    top: 5px;
-    left: -26px;
-    background-color: #ededed;
-    height: 20px;
-    width: 20px;
-    border-radius: 20px;
-}
-.registrationFormLabelFemale input:checked ~ .registrationFormFemale {
-    background-color: #ef6c00;
-    border: #ededed 5px solid;
-}
-.registrationFormLabelMale input:checked ~ .registrationFormMale {
-    background-color: #ef6c00;
-    border: #ededed 5px solid;
-}
-.registrationFormCheckContainer {
-    position: relative;
-}
-#registrationFormCheck {
-    position: absolute;
-    height: 0;
-    width: 0;
-}
-.registrationFormCheck {
-    position: absolute;
-    top: 16px;
-    left: -42px;
-    height: 20px;
-    width: 20px;
-    border-radius: 4px;
-    background-color: #ededed;
-}
-.registrationFormCheckLabel input:checked ~ .registrationFormCheck {
-    background-color: #ededed;
-    border: #ef6c00 7px solid;
-}
-.registrationFormCheckLabel {
-    margin-top: 16px;
+    font-size: 16px;
     font-weight: 600;
-    font-size: 15px;
-    width: 300px;
-    display: inline-block;
-    cursor: pointer;
+    margin: 0 32px 0 26px;
+}
+.registrationFormGenderMaleContainer {
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 32px 0 26px;
+}
+#registrationFormGenderCheckFemale {
+    width: 0;
+    height: 0;
+}
+#registrationFormGenderCheckMale {
+    width: 0;
+    height: 0;
+}
+.registrationFormGenderCheckFemale {
+    position: absolute;
+    top: 0px;
+    left: -26px;
+    background-color: #ededed;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+}
+.registrationFormGenderCheckMale {
+    position: absolute;
+    top: 0px;
+    left: -26px;
+    background-color: #ededed;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+}
+.registrationFormGenderFemaleContainer input:checked ~ .registrationFormGenderCheckFemale {
+    background-color: #ef6c00;
+    border: #ededed 5px solid;
+}
+.registrationFormGenderMaleContainer input:checked ~ .registrationFormGenderCheckMale {
+    background-color: #ef6c00;
+    border: #ededed 5px solid;
+}
+.registrationFormEULAContainer {
+    padding: 18px 0 0 118px;
+}
+.registrationFormEULAContainer label {
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+}
+#registrationFormEULACheck {
+    width: 0;
+    height: 0;
+}
+.registrationFormEULACheck {
+    position: absolute;
+    top: 0px;
+    left: -30px;
+    width: 20px;
+    height: 20px;
+    background-color: #ededed;
+    border-radius: 4px;
+}
+.registrationFormEULAContainer label input:checked ~ .registrationFormEULACheck {
+    background-color: #ef6c00;
+    border: #ededed 6px solid;
+}
+.registrationFormSubmitContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 .registrationFormSubmit {
     background-color: #ef2b2f;
-    font-size: 28px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 600;
     color: #fff;
     border: none;
     border-radius: 4px;
-    padding: 0 64px;
-    line-height: 60px;
+    padding: 14px 64px;
     margin-top: 28px;
     cursor: pointer;
+    transition: background-color .3s;
+    z-index: 2;
+}
+.registrationFormSubmit:hover {
+    background-color: #ff3b3e;
 }
 .registrationCards {
     position: absolute;
-    bottom: -72px;
-    left: -168px;
+    bottom: -102px;
+    left: -128px;
+    z-index: 1;
 }
 .footerSection {
     background-color: #006b41;
@@ -260,21 +301,127 @@
     margin: auto;
     display: flex;
     justify-content: space-evenly;
-    padding: 30px 0;
+    padding: 32px 0;
 }
 .footerContainer {
     display: flex;
     flex-direction: column;
 }
 .footerTitle {
-    font-size: 22px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 500;
     color: #fff;
     margin-bottom: 14px;
 }
 .footerLink {
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 500;
     color: #fff;
     text-decoration: none;
+}
+/* 
+#
+# ilhanan mobile style
+#
+#
+ */
+@media screen and (max-width: 1008px) {
+    body {
+        overflow-x: hidden;
+    }
+    .navigationMobileSection {
+        display: flex;
+    }
+    .headerNavigationContainer {
+        display: none;
+    }
+    .titleSection {
+        max-width: 75%;
+    }
+    .titleTitle {
+        text-align: left;
+        max-width: 100%;
+    }
+    .titleSubtitle {
+        text-align: left;
+        max-width: 100%;
+    }
+    .registrationFormSection {
+        width: 75%;
+        max-width: 98%;
+        margin: 44px auto 102px;
+        position: relative;
+    }
+    .registrationFormContainer {
+        margin: 0 0 224px 0;
+        width: 100%;
+        max-width: 100%;
+        background-color: none;
+        box-shadow: none;
+        padding: 18px 0;
+    }
+    .registrationFormInputContainer {
+        flex-direction: column;
+        justify-content: normal;
+        align-items: normal;
+        margin-bottom: 16px;
+    }
+    .registrationFormInputLabel {
+        font-weight: 500;
+        margin-bottom: 6px;
+    }
+    .registrationFormInputInput {
+        width: 100%;
+        font-weight: 500;
+    }
+    .registrationFormMobileContainer {
+        display: flex;
+    }
+    .registrationFormDateContainer {
+        flex-direction: column;
+        justify-content: normal;
+        align-items: normal;
+        margin-bottom: 16px;
+    }
+    .registrationFormDateSelect {
+        margin: 0 14px 0 0;
+    }
+    .registrationFormDateSelectArrow {
+        right: 26px;
+    }
+    .registrationFormGenderContainer {
+        display: flex;
+    }
+    .registrationFormEULAContainer {
+        padding: 16px 0 0 30px;
+    }
+    .registrationFormSubmitContainer {
+        align-items: flex-start;
+    }
+    .registrationCards {
+        bottom: -220px;
+        left: auto;
+        right: -64px;
+    }
+    .footerWrapper {
+        max-width: 75%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footerContainer {
+        margin-bottom: 20px;
+        border-bottom: #4c9779 1px solid;
+    }
+    .footerContainerLast {
+        margin-bottom: 0;
+        border-bottom: none;
+    }
+    .footerTitle {
+        margin-bottom: 8px;
+        width: 250px;
+        text-align: center;
+    }
+    .footerLink {
+        display: none;
+    }
 }
