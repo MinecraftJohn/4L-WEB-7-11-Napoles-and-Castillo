@@ -5,11 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width", initial-scale=1.0>
     <title>4L WEB 7/11 - Napoles & Castillo</title>
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
 </head>
 <body>
     <nav class="navigationMobileSection">
@@ -32,7 +30,7 @@
     </nav>
     <header class="headerSection">
         <div class="headerContainer">
-            <img src="assets/logo.png" alt="7/11 Banner Logo" class="headerLogo">
+            <img src="assets/images/logo.png" alt="7/11 Banner Logo" class="headerLogo">
         </div>
         <div class="headerNavigationContainer">
             <a href="#" class="headerLink">
@@ -62,15 +60,20 @@
         <form class="registrationFormContainer">
             <div class="registrationFormInputContainer">
                 <p class="registrationFormInputLabel">Name</p>
-                <input type="text" class="registrationFormInputInput">
+                <input type="text" oninput="inputNameInvalid()" 
+                class="registrationFormInputInput" id="registrationFormInputName"
+                title="Please type your FirstName MiddleName LastName, thank you!">
             </div>
             <div class="registrationFormInputContainer">
                 <p class="registrationFormInputLabel">Email</p>
-                <input type="email" class="registrationFormInputInput">
+                <input type="email" oninput="inputEmailInvalid()" 
+                class="registrationFormInputInput" id="registrationFormInputEmail">
             </div>
             <div class="registrationFormInputContainer registrationFormMobileContainer">
                 <p class="registrationFormInputLabel">Mobile Number</p>
-                <input type="text" class="registrationFormInputInput">
+                <input type="text" oninput="inputMobileNumberInvalid()" 
+                class="registrationFormInputInput" id="registrationFormInputMobileNumber"
+                title='Please eneter your Philippine mobile number starting with "09".'>
             </div>
             <div class="registrationFormDateContainer">
                 <p class="registrationFormInputLabel">Date of Birth</p>
@@ -146,7 +149,7 @@
                 <input type="submit" value="Submit" class="registrationFormSubmit">
             </div>
         </form>
-        <img src="assets/cards.png" alt="7 11 cards" class="registrationCards">
+        <img src="assets/images/cards.png" alt="7 11 cards" class="registrationCards">
     </div>
     <footer class="footerSection">
         <div class="footerWrapper">
