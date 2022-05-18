@@ -17,6 +17,8 @@ var registrationFormInputValidatorIcon0 = document.getElementsByClassName("regis
 var registrationFormInputValidatorIcon1 = document.getElementsByClassName("registrationFormInputValidatorIcon")[1]
 var registrationFormInputValidatorIcon2 = document.getElementsByClassName("registrationFormInputValidatorIcon")[2]
 var footerMessage = "This link is working. Thank me later xD"
+var registrationFormGenderCheckFemale = document.getElementById("registrationFormGenderCheckFemale")
+var registrationFormGenderCheckMale = document.getElementById("registrationFormGenderCheckMale")
 
 // Search Functions
 navigationMobileSearchInput.addEventListener("keypress", function(event) {
@@ -84,4 +86,12 @@ function inputMobileNumberInvalid () {
         registrationFormInputValidatorIcon2.innerHTML = "✖"
         registrationFormInputValidatorIcon2.style.color = "#ef2b2f"
     }
+}
+function registrationFormGenderFemaleCheck () {
+    registrationFormGenderCheckFemale.checked = true
+    registrationFormGenderCheckMale.checked = false
+}
+function registrationFormGenderMaleCheck () {
+    registrationFormGenderCheckMale.checked = true
+    registrationFormGenderCheckFemale.checked = false
 }

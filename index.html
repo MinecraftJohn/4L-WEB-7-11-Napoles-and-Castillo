@@ -142,14 +142,18 @@
                 <div class="registrationFormInputContainer registrationFormGenderContainer">
                     <p class="registrationFormInputLabel">Gender</p>
                     <div class="registrationFormGenderCheckContainer">
-                        <label for="registrationFormGenderCheckFemale" class="registrationFormGenderFemaleContainer">
+                        <label for="registrationFormGenderCheckFemale" class="registrationFormGenderFemaleContainer"
+                        onchange="registrationFormGenderFemaleCheck()">
                             Female
-                            <input type="checkbox" id="registrationFormGenderCheckFemale">
+                            <input type="checkbox" id="registrationFormGenderCheckFemale"
+                            value="female" name="female">
                             <span class="registrationFormGenderCheckFemale"></span>
                         </label>
-                        <label for="registrationFormGenderCheckMale" class="registrationFormGenderMaleContainer">
+                        <label for="registrationFormGenderCheckMale" class="registrationFormGenderMaleContainer"
+                        onchange="registrationFormGenderMaleCheck()">
                             Male
-                            <input type="checkbox" id="registrationFormGenderCheckMale">
+                            <input type="checkbox" id="registrationFormGenderCheckMale"
+                            value="male" name="male">
                             <span class="registrationFormGenderCheckMale"></span>
                         </label>
                     </div>
