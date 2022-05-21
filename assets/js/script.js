@@ -16,9 +16,14 @@ var searchLoadingButton = document.getElementsByClassName("searchLoadingButton")
 var registrationFormInputValidatorIcon0 = document.getElementsByClassName("registrationFormInputValidatorIcon")[0]
 var registrationFormInputValidatorIcon1 = document.getElementsByClassName("registrationFormInputValidatorIcon")[1]
 var registrationFormInputValidatorIcon2 = document.getElementsByClassName("registrationFormInputValidatorIcon")[2]
+var registrationFormInputMessage1 = document.getElementsByClassName("registrationFormInputMessage")[0]
+var registrationFormInputMessage2 = document.getElementsByClassName("registrationFormInputMessage")[1]
+var registrationFormInputMessage3 = document.getElementsByClassName("registrationFormInputMessage")[2]
 var footerMessage = "This link is working. Thank me later xD"
 var registrationFormGenderCheckFemale = document.getElementById("registrationFormGenderCheckFemale")
 var registrationFormGenderCheckMale = document.getElementById("registrationFormGenderCheckMale")
+var registrationFormSubmit = document.getElementsByClassName("registrationFormSubmit")[0]
+var registrationSubmittedBackground = document.getElementsByClassName("registrationSubmittedBackground")[0]
 
 // Search Functions
 navigationMobileSearchInput.addEventListener("keypress", function(event) {
@@ -55,38 +60,49 @@ function closeNavigationMobileMenuContainer () {
 
 // Registration Form Functions
 function inputNameInvalid () {
+    registrationFormInputName.style.backgroundColor = "#fff"
     if (registrationFormInputName.value.match(/([A-ZÑ][a-z-ñ.]+)$/)) {
         registrationFormInputName.style.border = "#39aa35 2px solid"
         registrationFormInputValidatorIcon0.innerHTML = "✔"
         registrationFormInputValidatorIcon0.style.color = "#39aa35"
+        registrationFormInputMessage1.style.display = "none"
     } else {
         registrationFormInputName.style.border = "#ef2b2f 2px solid"
         registrationFormInputValidatorIcon0.innerHTML = "✖"
         registrationFormInputValidatorIcon0.style.color = "#ef2b2f"
+        registrationFormInputMessage1.style.display = "block"
     }
 }
 function inputEmailInvalid () {
+    registrationFormInputEmail.style.backgroundColor = "#fff"
     if (registrationFormInputEmail.value.match(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/)) {
         registrationFormInputEmail.style.border = "#39aa35 2px solid"
         registrationFormInputValidatorIcon1.innerHTML = "✔"
         registrationFormInputValidatorIcon1.style.color = "#39aa35"
+        registrationFormInputMessage2.style.display = "none"
     } else {
         registrationFormInputEmail.style.border = "#ef2b2f 2px solid"
         registrationFormInputValidatorIcon1.innerHTML = "✖"
         registrationFormInputValidatorIcon1.style.color = "#ef2b2f"
+        registrationFormInputMessage2.style.display = "block"
     }
 }
 function inputMobileNumberInvalid () {
+    registrationFormInputMobileNumber.style.backgroundColor = "#fff"
     if (registrationFormInputMobileNumber.value.match(/(09[0-9]{9})/) && registrationFormInputMobileNumber.value.length == 11) {
         registrationFormInputMobileNumber.style.border = "#39aa35 2px solid"
         registrationFormInputValidatorIcon2.innerHTML = "✔"
         registrationFormInputValidatorIcon2.style.color = "#39aa35"
+        registrationFormInputMessage3.style.display = "none"
     } else {
         registrationFormInputMobileNumber.style.border = "#ef2b2f 2px solid"
         registrationFormInputValidatorIcon2.innerHTML = "✖"
         registrationFormInputValidatorIcon2.style.color = "#ef2b2f"
+        registrationFormInputMessage3.style.display = "block"
     }
 }
+
+// Gender Functions
 function registrationFormGenderFemaleCheck () {
     registrationFormGenderCheckFemale.checked = true
     registrationFormGenderCheckMale.checked = false
@@ -94,4 +110,13 @@ function registrationFormGenderFemaleCheck () {
 function registrationFormGenderMaleCheck () {
     registrationFormGenderCheckMale.checked = true
     registrationFormGenderCheckFemale.checked = false
+}
+
+// Submit button Function
+function registrationFormSubmitValidator () {
+    if (registrationFormInputName.value == "") {
+        registrationFormSubmit.style.backgroundColor = "cyan"
+    } else {
+        registrationSubmittedBackground.style.display = "flex"
+    }
 }

@@ -44,7 +44,6 @@
     padding: 0 38px 0 12px;
     color: #fff;
     font-size: 16px;
-    font-weight: 600;
 }
 .navigationMobileSearchIcon {
     position: absolute;
@@ -64,6 +63,7 @@
 .headerLogo {
     background-color: #fff;
     padding: 0 18px;
+    -webkit-user-select: none;
     user-select: none;
 }
 .headerNavigationContainer {
@@ -107,7 +107,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
     height: 100vh;
     z-index: 8;
@@ -193,6 +193,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 23px;
     position: relative;
 }
@@ -207,14 +208,22 @@
     border: none;
     padding: 16px 48px 16px 16px;
     font-size: 24px;
-    font-weight: 600;
     outline: none;
 }
 .registrationFormInputValidatorIcon {
     font-size: 22px;
     position: absolute;
     right: 16px;
-    bottom: 13px;
+    top: 11px;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.registrationFormInputMessage {
+    display: none;
+    margin: 8px 0 0 102px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ef2b2f;
 }
 .registrationFormMobileContainer {
     display: none;
@@ -237,7 +246,6 @@
     border: none;
     border-radius: 8px;
     font-size: 16px;
-    font-weight: 600;
     outline: none;
     padding: 9px 16px 9px 12px;
     cursor: pointer;
@@ -264,14 +272,12 @@
 .registrationFormGenderFemaleContainer {
     position: relative;
     font-size: 16px;
-    font-weight: 600;
-    margin: 0 32px 0 26px;
+    margin: 0 32px 0 30px;
 }
 .registrationFormGenderMaleContainer {
     position: relative;
     font-size: 16px;
-    font-weight: 600;
-    margin: 0 32px 0 26px;
+    margin: 0 32px 0 30px;
 }
 #registrationFormGenderCheckFemale {
     width: 0;
@@ -284,7 +290,7 @@
 .registrationFormGenderCheckFemale {
     position: absolute;
     top: 0px;
-    left: -26px;
+    left: -30px;
     background-color: #ededed;
     height: 20px;
     width: 20px;
@@ -293,7 +299,7 @@
 .registrationFormGenderCheckMale {
     position: absolute;
     top: 0px;
-    left: -26px;
+    left: -30px;
     background-color: #ededed;
     height: 20px;
     width: 20px;
@@ -351,6 +357,9 @@
     cursor: pointer;
     transition: background-color .15s;
     z-index: 2;
+    -webkit-user-select: none;
+    user-select: none;
+    text-align: center;
 }
 .registrationFormSubmit:hover {
     background-color: #d22629;
@@ -360,7 +369,49 @@
     bottom: -102px;
     left: -128px;
     z-index: 1;
+    -webkit-user-select: none;
     user-select: none;
+}
+.registrationSubmittedBackground {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.registrationSubmittedContainer {
+    background-color: #fff;
+    width: 420px;
+    max-width: 90%;
+    border-radius: 4px;
+    padding: 48px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: registrationSubmittedContainer .5s cubic-bezier(0.18, 0.89, 0.32, 1.28) .8s 1 forwards;
+    transform: scale(0);
+}
+@keyframes registrationSubmittedContainer {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.registrationSubmittedIcon {
+    width: 64px;
+    fill: #006b41;
+}
+.registrationSubmittedTitle {
+    font-size: 24px;
+    margin-top: 18px;
 }
 .searchSection {
     display: none;
@@ -528,6 +579,12 @@
         width: 100%;
         font-weight: 500;
     }
+    .registrationFormInputValidatorIcon {
+        top: 45px;
+    }
+    .registrationFormInputMessage {
+        margin: 8px 0 0 0;
+    }
     .registrationFormMobileContainer {
         display: flex;
     }
@@ -549,8 +606,8 @@
     .registrationFormEULAContainer {
         padding: 16px 0 0 30px;
     }
-    .registrationFormSubmitContainer {
-        align-items: flex-start;
+    .registrationFormSubmit {
+        width: 100%;
     }
     .registrationCards {
         bottom: 0;
