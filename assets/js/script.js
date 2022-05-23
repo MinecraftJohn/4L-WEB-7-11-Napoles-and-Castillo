@@ -19,11 +19,17 @@ var registrationFormInputValidatorIcon2 = document.getElementsByClassName("regis
 var registrationFormInputMessage1 = document.getElementsByClassName("registrationFormInputMessage")[0]
 var registrationFormInputMessage2 = document.getElementsByClassName("registrationFormInputMessage")[1]
 var registrationFormInputMessage3 = document.getElementsByClassName("registrationFormInputMessage")[2]
+var registrationFormInputMessage4 = document.getElementsByClassName("registrationFormInputMessage")[3]
+var registrationFormInputMessage5 = document.getElementsByClassName("registrationFormInputMessage")[4]
 var footerMessage = "This link is working. Thank me later xD"
 var registrationFormGenderCheckFemale = document.getElementById("registrationFormGenderCheckFemale")
 var registrationFormGenderCheckMale = document.getElementById("registrationFormGenderCheckMale")
 var registrationFormSubmit = document.getElementsByClassName("registrationFormSubmit")[0]
 var registrationSubmittedBackground = document.getElementsByClassName("registrationSubmittedBackground")[0]
+var registrationFormDateSelect1 = document.getElementsByClassName("registrationFormDateSelect")[0]
+var registrationFormDateSelect2 = document.getElementsByClassName("registrationFormDateSelect")[1]
+var registrationFormDateSelect3 = document.getElementsByClassName("registrationFormDateSelect")[2]
+var registrationFormEULACheck = document.getElementById("registrationFormEULACheck")
 
 // Search Functions
 navigationMobileSearchInput.addEventListener("keypress", function(event) {
@@ -71,6 +77,7 @@ function inputNameInvalid () {
         registrationFormInputValidatorIcon0.innerHTML = "✖"
         registrationFormInputValidatorIcon0.style.color = "#ef2b2f"
         registrationFormInputMessage1.style.display = "block"
+        registrationFormInputMessage1.innerHTML = "Use capital letter every first word. Numbers are not allowed."
     }
 }
 function inputEmailInvalid () {
@@ -85,6 +92,7 @@ function inputEmailInvalid () {
         registrationFormInputValidatorIcon1.innerHTML = "✖"
         registrationFormInputValidatorIcon1.style.color = "#ef2b2f"
         registrationFormInputMessage2.style.display = "block"
+        registrationFormInputMessage2.innerHTML = "This is an invalid email address."
     }
 }
 function inputMobileNumberInvalid () {
@@ -102,6 +110,16 @@ function inputMobileNumberInvalid () {
     }
 }
 
+// Date of Birth Funcitons
+function registrationFormDateSelected () {
+    if (registrationFormDateSelect1.value == "MONTH" || registrationFormDateSelect2.value == "DAY" || registrationFormDateSelect3.value == "YEAR") {
+        registrationFormInputMessage4.style.display = "block"
+        registrationFormInputMessage4.style.margin = "-12px 0 0 0"
+    } else {
+        registrationFormInputMessage4.style.display = "none"
+    }
+}
+
 // Gender Functions
 function registrationFormGenderFemaleCheck () {
     registrationFormGenderCheckFemale.checked = true
@@ -112,10 +130,42 @@ function registrationFormGenderMaleCheck () {
     registrationFormGenderCheckFemale.checked = false
 }
 
+// Terms and Condition Funcitons
+function registrationFormEULA () {
+    if (registrationFormEULACheck.checked == true) {
+        registrationFormInputMessage5.style.display = "none"
+    }
+}
+
 // Submit button Function
 function registrationFormSubmitValidator () {
     if (registrationFormInputName.value == "") {
-        registrationFormSubmit.style.backgroundColor = "cyan"
+        registrationFormInputName.style.backgroundColor = "#fff"
+        registrationFormInputName.style.border = "#ef2b2f 2px solid"
+        registrationFormInputValidatorIcon0.innerHTML = "✖"
+        registrationFormInputValidatorIcon0.style.color = "#ef2b2f"
+        registrationFormInputMessage1.style.display = "block"
+        registrationFormInputMessage1.innerHTML = "This field is required."
+    } else if (registrationFormInputEmail.value == "") {
+        registrationFormInputEmail.style.backgroundColor = "#fff"
+        registrationFormInputEmail.style.border = "#ef2b2f 2px solid"
+        registrationFormInputValidatorIcon1.innerHTML = "✖"
+        registrationFormInputValidatorIcon1.style.color = "#ef2b2f"
+        registrationFormInputMessage2.style.display = "block"
+        registrationFormInputMessage2.innerHTML = "This field is required."
+    } else if (registrationFormDateSelect1.value == "MONTH") {
+        registrationFormInputMessage4.style.display = "block"
+        registrationFormInputMessage4.style.margin = "-12px 0 0 0"
+    } else if (registrationFormDateSelect2.value == "DAY") {
+        registrationFormInputMessage4.style.display = "block"
+        registrationFormInputMessage4.style.margin = "-12px 0 0 0"
+    } else if (registrationFormDateSelect3.value == "YEAR") {
+        registrationFormInputMessage4.style.display = "block"
+        registrationFormInputMessage4.style.margin = "-12px 0 0 0"
+    } else if (registrationFormEULACheck.checked == false) {
+        registrationFormInputMessage5.style.display = "block"
+    } else if (registrationFormInputName.value.match(/([A-ZÑ][a-z-ñ.]+)$/) === true) {
+        registrationFormInputMessage5.style.display = "block"
     } else {
         registrationSubmittedBackground.style.display = "flex"
     }

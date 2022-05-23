@@ -78,14 +78,14 @@
                     <input type="text" oninput="inputNameInvalid()" 
                     class="registrationFormInputInput" id="registrationFormInputName">
                     <span class="registrationFormInputValidatorIcon"></span>
-                    <p class="registrationFormInputMessage">Use capital letter every first word. Numbers are not allowed.</p>
+                    <p class="registrationFormInputMessage"></p>
                 </div>
                 <div class="registrationFormInputContainer">
                     <p class="registrationFormInputLabel">Email</p>
                     <input type="email" oninput="inputEmailInvalid()" 
                     class="registrationFormInputInput" id="registrationFormInputEmail">
                     <span class="registrationFormInputValidatorIcon"></span>
-                    <p class="registrationFormInputMessage">This is an invalid email address.</p>
+                    <p class="registrationFormInputMessage"></p>
                 </div>
                 <div class="registrationFormInputContainer registrationFormMobileContainer">
                     <p class="registrationFormInputLabel">Mobile Number</p>
@@ -98,7 +98,8 @@
                     <p class="registrationFormInputLabel">Date of Birth</p>
                     <div class="registrationFormDateDatesContainer">
                         <div class="registrationFormDateDates">
-                            <select aria-label="registrationDateMonth" class="registrationFormDateSelect">
+                            <select aria-label="registrationDateMonth" 
+                            class="registrationFormDateSelect" oninput="registrationFormDateSelected()">
                                 <option>MONTH</option>
                                 <option>January</option>
                                 <option>Februay</option>
@@ -116,7 +117,8 @@
                             <div class="registrationFormDateSelectArrow"></div>
                         </div>
                         <div class="registrationFormDateDates">
-                            <select aria-label="registrationDateDay" class="registrationFormDateSelect">
+                            <select aria-label="registrationDateDay" 
+                            class="registrationFormDateSelect" oninput="registrationFormDateSelected()">
                                 <option>DAY</option>
                                 <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
                                 <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
@@ -129,7 +131,8 @@
                             <div class="registrationFormDateSelectArrow"></div>
                         </div>
                         <div class="registrationFormDateDates">
-                            <select aria-label="registrationDateYear" class="registrationFormDateSelect">
+                            <select aria-label="registrationDateYear" 
+                            class="registrationFormDateSelect" oninput="registrationFormDateSelected()">
                                 <option>YEAR</option>
                                 <option>1995</option><option>1996</option><option>1997</option><option>1998</option><option>1999</option>
                                 <option>2000</option><option>2001</option><option>2002</option><option>2003</option><option>2004</option>
@@ -142,6 +145,7 @@
                         </div>
                     </div>
                 </div>
+                <p class="registrationFormInputMessage">This is an invalid date of birth.</p>
                 <div class="registrationFormInputContainer registrationFormGenderContainer">
                     <p class="registrationFormInputLabel">Gender</p>
                     <div class="registrationFormGenderCheckContainer">
@@ -162,10 +166,11 @@
                 <div class="registrationFormEULAContainer">
                     <label for="registrationFormEULACheck">
                         Proin sit amet lectus venenatis, consectetur magna vitae, convallis diam. Nullam iaculis.
-                        <input type="checkbox" id="registrationFormEULACheck">
+                        <input type="checkbox" id="registrationFormEULACheck" onclick="registrationFormEULA()">
                         <span class="registrationFormEULACheck"></span>
                     </label>
                 </div>
+                <p class="registrationFormInputMessage">Please accept the Terms and Conditions.</p>
                 <div class="registrationFormSubmitContainer">
                     <span class="registrationFormSubmit" onclick="registrationFormSubmitValidator()">Submit</span>
                 </div>
