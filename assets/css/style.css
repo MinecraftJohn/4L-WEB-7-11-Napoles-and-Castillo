@@ -26,6 +26,7 @@
 }
 .navigationMobileMenuContainer {
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 .navigationMobileSearchContainer {
     display: flex;

@@ -64,6 +64,17 @@ function closeNavigationMobileMenuContainer () {
     headerMobileNavigationContainer.style.left = "-100%"
 }
 
+// Registration Form Empty Input Functions
+function clearNameInput () {
+    registrationFormInputName.value = ""
+}
+function clearEmailInput () {
+    registrationFormInputEmail.value = ""
+}
+function clearMobileNumberInput () {
+    registrationFormInputMobileNumber.value = ""
+}
+
 // Registration Form Functions
 function inputNameInvalid () {
     registrationFormInputName.style.backgroundColor = "#fff"
