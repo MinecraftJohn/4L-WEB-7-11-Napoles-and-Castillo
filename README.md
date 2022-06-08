@@ -9,8 +9,8 @@ Site: https://minecraftjohn.github.io/WEB-7-Eleven/<br>
 <img src="https://github.com/MinecraftJohn/WEB-711/blob/4L-WEB-7/11/assets/images/repository-webpreview.png?raw=true">
 This project is for my school subject Software Development 244 and WEB 241<br>
 <br>
-This is my first web project in school. In this project they will see a registration page with header and footer on it. The registration form has a validation system where they can't submit the form is the input is empty or invalid. This project helps me earn more knowledge about scripting, it was hard and thanks a lot to stack overflow community. The UI of this project was based on my professor's PDF sample<br>
+This is my first web project in school. In this project they will see a registration page with header and footer on it. The registration form has a validation system where they can't submit the form is the input is empty or invalid. This project helps me earn more knowledge about scripting, it was hard and thanks a lot to stack overflow community. The UI of this project was based on my professor's PDF sample.<br>
 <br>
-I plan on adding a database on it and dive on to back-end as it is required by the professor. The 7-Elenven project is a great web exercise to me, I am looking forward for more discovery and fun experience.<br>
+I plan on adding a database on it and dive on to back-end as it is required by the professor. The 7-Eleven project is a great web exercise to me, I am looking forward for more discovery and fun experience.<br>
 <br>
 This project is maintained by <a href="https://github.com/MinecraftJohn" target="_blank" rel="noopener noreferrer">John Napoles</a> and is open to contributions!
