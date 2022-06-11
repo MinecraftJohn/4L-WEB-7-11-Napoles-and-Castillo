@@ -8,9 +8,8 @@ var navigationMobileSearchIcon = document.getElementsByClassName("navigationMobi
 var homeSection = document.getElementsByClassName("homeSection")[0]
 var searchSection = document.getElementsByClassName("searchSection")[0]
 var searchLoading = document.getElementsByClassName("searchLoading")[0]
-var searchLoadingTitle0 = document.getElementsByClassName("searchLoadingTitle")[0]
-var searchLoadingTitle1 = document.getElementsByClassName("searchLoadingTitle")[1]
-var searchLoadingImage = document.getElementsByClassName("searchLoadingImage")[0]
+var searchLoadingTitle = document.getElementsByClassName("searchLoadingTitle")[0]
+var searchLoadingTitleMsg = document.getElementsByClassName("searchLoadingTitleMsg")[0]
 var searchLoadingText = document.getElementsByClassName("searchLoadingText")[0]
 var searchLoadingButton = document.getElementsByClassName("searchLoadingButton")[0]
 var registrationFormInputValidatorIcon0 = document.getElementsByClassName("registrationFormInputValidatorIcon")[0]
@@ -42,13 +41,16 @@ function searchTriggered () {
     homeSection.style.display = "none"
     searchSection.style.display = "flex"
     searchLoading.style.display = "block"
-    setTimeout(searchTriggeredPrank, 5000)
-    function searchTriggeredPrank () {
+    searchLoadingTitle.style.display = "none"
+    searchLoadingTitleMsg.style.display = "none"
+    searchLoadingButton.style.display = "none"
+    searchLoadingText.style.display = "block"
+    setTimeout(searchTriggeredError, 5000)
+    function searchTriggeredError () {
         searchLoading.style.display = "none"
         searchLoadingText.style.display = "none"
-        searchLoadingTitle0.style.display = "block"
-        searchLoadingTitle1.style.display = "block"
-        searchLoadingImage.style.display = "block"
+        searchLoadingTitle.style.display = "block"
+        searchLoadingTitleMsg.style.display = "block"
         searchLoadingButton.style.display = "block"
         navigationMobileSearchInput.value = ""
     }
