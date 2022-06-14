@@ -612,6 +612,7 @@
     }
     .footerContainer {
         margin-bottom: 20px;
+        padding-bottom: 8px;
         border-bottom: #4c9779 1px solid;
     }
     .footerContainerLast {
@@ -619,11 +620,16 @@
         border-bottom: none;
     }
     .footerTitle {
-        margin-bottom: 8px;
+        margin-bottom: 0px;
         width: 250px;
         text-align: center;
+        cursor: pointer;
     }
     .footerLink {
         display: none;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.6);
     }
 }

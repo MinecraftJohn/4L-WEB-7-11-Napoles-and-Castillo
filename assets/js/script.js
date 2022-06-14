@@ -29,6 +29,27 @@ var registrationFormDateSelect1 = document.getElementsByClassName("registrationF
 var registrationFormDateSelect2 = document.getElementsByClassName("registrationFormDateSelect")[1]
 var registrationFormDateSelect3 = document.getElementsByClassName("registrationFormDateSelect")[2]
 var registrationFormEULACheck = document.getElementById("registrationFormEULACheck")
+var mobileMediaQuery = window.matchMedia("(max-width: 768px)")
+var footerTitle1 = document.getElementsByClassName("footerTitle")[0]
+var footerTitle2 = document.getElementsByClassName("footerTitle")[1]
+var footerTitle3 = document.getElementsByClassName("footerTitle")[2]
+var footerTitle4 = document.getElementsByClassName("footerTitle")[3]
+var footerLink1 = document.getElementsByClassName("footerLink")[0]
+var footerLink2 = document.getElementsByClassName("footerLink")[1]
+var footerLink3 = document.getElementsByClassName("footerLink")[2]
+var footerLink4 = document.getElementsByClassName("footerLink")[3]
+var footerLink5 = document.getElementsByClassName("footerLink")[4]
+var footerLink6 = document.getElementsByClassName("footerLink")[5]
+var footerLink7 = document.getElementsByClassName("footerLink")[6]
+var footerLink8 = document.getElementsByClassName("footerLink")[7]
+var footerLink9 = document.getElementsByClassName("footerLink")[8]
+var footerLink10 = document.getElementsByClassName("footerLink")[9]
+var footerLink11 = document.getElementsByClassName("footerLink")[10]
+var footerLink12 = document.getElementsByClassName("footerLink")[11]
+var footerLink13 = document.getElementsByClassName("footerLink")[12]
+var footerLink14 = document.getElementsByClassName("footerLink")[13]
+var footerLink15 = document.getElementsByClassName("footerLink")[14]
+var footerLink16 = document.getElementsByClassName("footerLink")[15]
 
 // Search Functions
 navigationMobileSearchInput.addEventListener("keypress", function(event) {
@@ -182,4 +203,89 @@ function registrationFormSubmitValidator () {
     } else {
         registrationSubmittedBackground.style.display = "flex"
     }
+}
+
+// Footer Functions
+function mobileMediaQueryFunction(mobileMediaQuery) {
+    if (mobileMediaQuery.matches) {
+        footerTitle1.setAttribute("onclick","footerLinkShow1()")
+        footerTitle2.setAttribute("onclick","footerLinkShow2()")
+        footerTitle3.setAttribute("onclick","footerLinkShow3()")
+        footerTitle4.setAttribute("onclick","footerLinkShow4()")
+    } else {
+        footerTitle1.removeAttribute("onclick")
+        footerTitle2.removeAttribute("onclick")
+        footerTitle3.removeAttribute("onclick")
+        footerTitle4.removeAttribute("onclick")
+    }
+}
+mobileMediaQueryFunction(mobileMediaQuery)
+mobileMediaQuery.addListener(mobileMediaQueryFunction)
+function footerLinkShow1 () {
+    footerTitle1.setAttribute("onclick","footerLinkHide1()")
+    footerLink1.style.display = "block"
+    footerLink2.style.display = "block"
+    footerLink3.style.display = "block"
+    footerLink4.style.display = "block"
+    footerLinkHide2 ()
+    footerLinkHide3 ()
+    footerLinkHide4 ()
+}
+function footerLinkShow2 () {
+    footerTitle2.setAttribute("onclick","footerLinkHide2()")
+    footerLink5.style.display = "block"
+    footerLink6.style.display = "block"
+    footerLink7.style.display = "block"
+    footerLink8.style.display = "block"
+    footerLinkHide1 ()
+    footerLinkHide3 ()
+    footerLinkHide4 ()
+}
+function footerLinkShow3 () {
+    footerTitle3.setAttribute("onclick","footerLinkHide3()")
+    footerLink9.style.display = "block"
+    footerLink10.style.display = "block"
+    footerLink11.style.display = "block"
+    footerLink12.style.display = "block"
+    footerLinkHide1 ()
+    footerLinkHide2 ()
+    footerLinkHide4 ()
+}
+function footerLinkShow4 () {
+    footerTitle4.setAttribute("onclick","footerLinkHide4()")
+    footerLink13.style.display = "block"
+    footerLink14.style.display = "block"
+    footerLink15.style.display = "block"
+    footerLink16.style.display = "block"
+    footerLinkHide1 ()
+    footerLinkHide2 ()
+    footerLinkHide3 ()
+}
+function footerLinkHide1 () {
+    footerTitle1.setAttribute("onclick","footerLinkShow1()")
+    footerLink1.style.display = "none"
+    footerLink2.style.display = "none"
+    footerLink3.style.display = "none"
+    footerLink4.style.display = "none"
+}
+function footerLinkHide2 () {
+    footerTitle2.setAttribute("onclick","footerLinkShow2()")
+    footerLink5.style.display = "none"
+    footerLink6.style.display = "none"
+    footerLink7.style.display = "none"
+    footerLink8.style.display = "none"
+}
+function footerLinkHide3 () {
+    footerTitle3.setAttribute("onclick","footerLinkShow3()")
+    footerLink9.style.display = "none"
+    footerLink10.style.display = "none"
+    footerLink11.style.display = "none"
+    footerLink12.style.display = "none"
+}
+function footerLinkHide4 () {
+    footerTitle4.setAttribute("onclick","footerLinkShow4()")
+    footerLink13.style.display = "none"
+    footerLink14.style.display = "none"
+    footerLink15.style.display = "none"
+    footerLink16.style.display = "none"
 }
