@@ -4,7 +4,7 @@
 </a>
 <br>
 <br>
-Site: https://minecraftjohn.github.io/WEB-7-Eleven/<br>
+Site: http://minecraftjohn-7eleven.epizy.com/<br>
 <br>
 <img src="https://github.com/MinecraftJohn/WEB-711/blob/4L-WEB-7/11/assets/images/repository-webpreview.png?raw=true">
 This project is for my school subject Software Development 244 and WEB 241<br>
