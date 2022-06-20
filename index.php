@@ -1,4 +1,5 @@
 <?php include "pagephpvariables/variables.php" ?>
+<?php $dbConnect = new mysqli("localhost", "root", "", ""); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,24 +21,24 @@
         </div>
         <div class="registrationFormSection">
             <h1 class="registrationFormTitle">Registration Form</h1>
-            <form class="registrationFormContainer">
+            <form class="registrationFormContainer" action="pagephpvariables/signup.php" method="POST">
                 <div class="registrationFormInputContainer">
                     <p class="registrationFormInputLabel">Name</p>
-                    <input type="text" oninput="inputNameInvalid()" 
+                    <input type="text" name="signupName" oninput="inputNameInvalid()" 
                     class="registrationFormInputInput" id="registrationFormInputName">
                     <span class="registrationFormInputValidatorIcon" onclick="clearNameInput()"></span>
                     <p class="registrationFormInputMessage"></p>
                 </div>
                 <div class="registrationFormInputContainer">
                     <p class="registrationFormInputLabel">Email</p>
-                    <input type="email" oninput="inputEmailInvalid()" 
+                    <input type="email" name="signupEmail" oninput="inputEmailInvalid()" 
                     class="registrationFormInputInput" id="registrationFormInputEmail">
                     <span class="registrationFormInputValidatorIcon" onclick="clearEmailInput()"></span>
                     <p class="registrationFormInputMessage"></p>
                 </div>
                 <div class="registrationFormInputContainer registrationFormMobileContainer">
                     <p class="registrationFormInputLabel">Mobile Number</p>
-                    <input type="text" oninput="inputMobileNumberInvalid()" 
+                    <input type="text" name="signupMobileNumber" oninput="inputMobileNumberInvalid()" 
                     class="registrationFormInputInput" id="registrationFormInputMobileNumber">
                     <span class="registrationFormInputValidatorIcon" onclick="clearMobileNumberInput()"></span>
                     <p class="registrationFormInputMessage">Use 09 at the start. Letters are not allowed. Maximum of 11 character only.</p>
@@ -46,7 +47,7 @@
                     <p class="registrationFormInputLabel">Date of Birth</p>
                     <div class="registrationFormDateDatesContainer">
                         <div class="registrationFormDateDates">
-                            <select aria-label="registrationDateMonth" 
+                            <select aria-label="registrationDateMonth" name="signupDateMonth" 
                             class="registrationFormDateSelect" oninput="registrationFormDateSelected()">
                                 <option>MONTH</option>
                                 <option>January</option>
@@ -65,7 +66,7 @@
                             <div class="registrationFormDateSelectArrow"></div>
                         </div>
                         <div class="registrationFormDateDates">
-                            <select aria-label="registrationDateDay" 
+                            <select aria-label="registrationDateDay" name="signupDateDay" 
                             class="registrationFormDateSelect" oninput="registrationFormDateSelected()">
                                 <option>DAY</option>
                                 <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
@@ -79,7 +80,7 @@
                             <div class="registrationFormDateSelectArrow"></div>
                         </div>
                         <div class="registrationFormDateDates">
-                            <select aria-label="registrationDateYear" 
+                            <select aria-label="registrationDateYear" name="signupDateYear" 
                             class="registrationFormDateSelect" oninput="registrationFormDateSelected()">
                                 <option>YEAR</option>
                                 <option>1995</option><option>1996</option><option>1997</option><option>1998</option><option>1999</option>
@@ -100,13 +101,15 @@
                         <label for="registrationFormGenderCheckFemale" class="registrationFormGenderFemaleContainer"
                         onchange="registrationFormGenderFemaleCheck()">
                             Female
-                            <input type="checkbox" id="registrationFormGenderCheckFemale">
+                            <input type="checkbox" id="registrationFormGenderCheckFemale" 
+                            name="signupSex" value="2">
                             <span class="registrationFormGenderCheckFemale"></span>
                         </label>
                         <label for="registrationFormGenderCheckMale" class="registrationFormGenderMaleContainer"
                         onchange="registrationFormGenderMaleCheck()">
                             Male
-                            <input type="checkbox" id="registrationFormGenderCheckMale">
+                            <input type="checkbox" id="registrationFormGenderCheckMale" 
+                            name="signupSex" value="1">
                             <span class="registrationFormGenderCheckMale"></span>
                         </label>
                     </div>
@@ -121,6 +124,7 @@
                 <p class="registrationFormInputMessage">Please accept the Terms and Conditions.</p>
                 <div class="registrationFormSubmitContainer">
                     <span class="registrationFormSubmit" onclick="registrationFormSubmitValidator()">Submit</span>
+                    <button class="registrationFormSubmit" type="submit" style="display: none;">Real Submit</button>
                 </div>
             </form>
             <img src="assets/images/cards.png" alt="7 11 cards" class="registrationCards">

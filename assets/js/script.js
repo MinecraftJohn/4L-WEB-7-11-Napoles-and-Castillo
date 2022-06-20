@@ -24,6 +24,7 @@ var footerMessage = "This link is working. Thank me later xD"
 var registrationFormGenderCheckFemale = document.getElementById("registrationFormGenderCheckFemale")
 var registrationFormGenderCheckMale = document.getElementById("registrationFormGenderCheckMale")
 var registrationFormSubmit = document.getElementsByClassName("registrationFormSubmit")[0]
+var registrationFormSubmit1 = document.getElementsByClassName("registrationFormSubmit")[1]
 var registrationSubmittedBackground = document.getElementsByClassName("registrationSubmittedBackground")[0]
 var registrationFormDateSelect1 = document.getElementsByClassName("registrationFormDateSelect")[0]
 var registrationFormDateSelect2 = document.getElementsByClassName("registrationFormDateSelect")[1]
@@ -202,6 +203,10 @@ function registrationFormSubmitValidator () {
         registrationFormInputMessage5.style.display = "block"
     } else {
         registrationSubmittedBackground.style.display = "flex"
+        setTimeout(registrationFormSubmitted, 3000)
+        function registrationFormSubmitted () {
+            registrationFormSubmit1.click()
+        }
     }
 }
 

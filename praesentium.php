@@ -21,5 +21,18 @@
     </div>
     <?php include "pagesection/searchsection.php"; ?>
     <?php include "pagesection/footersection.php"; ?>
+    <script>
+        var headerLinkHover1 = document.getElementsByClassName("headerLinkHover")[0]
+        var headerLinkHover2 = document.getElementsByClassName("headerLinkHover")[1]
+        var headerLinkHover3 = document.getElementsByClassName("headerLinkHover")[2]
+        var headerLinkHover4 = document.getElementsByClassName("headerLinkHover")[3]
+        function headerLinkActive () {
+            headerLinkHover1.setAttribute("class","headerLinkHover headerLinkActive")
+            headerLinkHover2.setAttribute("class","headerLinkHover")
+            headerLinkHover3.setAttribute("class","headerLinkHover")
+            headerLinkHover4.setAttribute("class","headerLinkHover")
+        }
+        headerLinkActive ()
+    </script>
 </body>
 </html>
