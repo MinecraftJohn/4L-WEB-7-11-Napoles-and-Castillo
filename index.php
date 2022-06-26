@@ -1,12 +1,11 @@
 <?php include "pagephpvariables/variables.php" ?>
-<?php $dbConnect = new mysqli("localhost", "root", "", ""); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width" initial-scale=1.0>
-    <title>WEB - 7/11 (Napoles, John M. 4L)</title>
+    <title>WEB - 7 Eleven (Napoles, John M. 4L)</title>
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/script.js" defer></script>
@@ -21,7 +20,7 @@
         </div>
         <div class="registrationFormSection">
             <h1 class="registrationFormTitle">Registration Form</h1>
-            <form class="registrationFormContainer" action="pagephpvariables/signup.php" method="POST">
+            <form class="registrationFormContainer" method="POST">
                 <div class="registrationFormInputContainer">
                     <p class="registrationFormInputLabel">Name</p>
                     <input type="text" name="signupName" oninput="inputNameInvalid()" 
@@ -124,7 +123,7 @@
                 <p class="registrationFormInputMessage">Please accept the Terms and Conditions.</p>
                 <div class="registrationFormSubmitContainer">
                     <span class="registrationFormSubmit" onclick="registrationFormSubmitValidator()">Submit</span>
-                    <button class="registrationFormSubmit" type="submit" style="display: none;">Real Submit</button>
+                    <button class="registrationFormSubmit" type="submit" name="signupSubmit"style="display: none;">Real Submit</button>
                 </div>
             </form>
             <img src="assets/images/cards.png" alt="7 11 cards" class="registrationCards">
@@ -141,6 +140,7 @@
                     <p class="registrationSubmittedTitle">Successfuly registered</p>
                 </div>
             </div>
+            <?php include "pagephpvariables/signup.php" ?>
         </div>
     </div>
     <?php include "pagesection/searchsection.php"; ?>

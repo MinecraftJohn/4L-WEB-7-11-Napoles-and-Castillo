@@ -25,7 +25,6 @@ var registrationFormGenderCheckFemale = document.getElementById("registrationFor
 var registrationFormGenderCheckMale = document.getElementById("registrationFormGenderCheckMale")
 var registrationFormSubmit = document.getElementsByClassName("registrationFormSubmit")[0]
 var registrationFormSubmit1 = document.getElementsByClassName("registrationFormSubmit")[1]
-var registrationSubmittedBackground = document.getElementsByClassName("registrationSubmittedBackground")[0]
 var registrationFormDateSelect1 = document.getElementsByClassName("registrationFormDateSelect")[0]
 var registrationFormDateSelect2 = document.getElementsByClassName("registrationFormDateSelect")[1]
 var registrationFormDateSelect3 = document.getElementsByClassName("registrationFormDateSelect")[2]
@@ -127,7 +126,7 @@ function inputEmailInvalid () {
         registrationFormInputValidatorIcon1.innerHTML = "✖"
         registrationFormInputValidatorIcon1.style.color = "#ef2b2f"
         registrationFormInputMessage2.style.display = "block"
-        registrationFormInputMessage2.innerHTML = "This is an invalid email address."
+        registrationFormInputMessage2.innerHTML = "Invalid email address."
     }
 }
 function inputMobileNumberInvalid () {
@@ -202,11 +201,7 @@ function registrationFormSubmitValidator () {
     } else if (registrationFormInputName.value.match(/([A-ZÑ][a-z-ñ.]+)$/) === true) {
         registrationFormInputMessage5.style.display = "block"
     } else {
-        registrationSubmittedBackground.style.display = "flex"
-        setTimeout(registrationFormSubmitted, 3000)
-        function registrationFormSubmitted () {
-            registrationFormSubmit1.click()
-        }
+        registrationFormSubmit1.click()
     }
 }
 

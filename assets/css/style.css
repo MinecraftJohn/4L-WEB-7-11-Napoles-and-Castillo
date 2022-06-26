@@ -243,6 +243,7 @@
 .registrationFormDateDatesContainer {
     display: flex;
     flex-wrap: wrap;
+    gap: 8px;
 }
 .registrationFormDateSelect {
     background-color: #ededed;
@@ -252,7 +253,6 @@
     outline: none;
     padding: 9px 16px 9px 12px;
     cursor: pointer;
-    margin: 0 0 0 6px;
 }
 .registrationFormDateSelectArrow {
     position: absolute;
@@ -582,12 +582,6 @@
         justify-content: normal;
         align-items: normal;
         margin-bottom: 16px;
-    }
-    .registrationFormDateSelect {
-        margin: 0 14px 0 0;
-    }
-    .registrationFormDateSelectArrow {
-        right: 26px;
     }
     .registrationFormGenderContainer {
         display: flex;
