@@ -172,6 +172,11 @@
     font-weight: 500;
     margin: 18px auto 0;
 }
+.getDataLabel {
+    text-align: center;
+    margin-bottom: 32px;
+    color: #666;
+}
 .registrationFormSection {
     width: 532px;
     max-width: 98%;

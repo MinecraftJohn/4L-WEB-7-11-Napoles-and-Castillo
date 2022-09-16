@@ -1,4 +1,11 @@
-<?php include "pagephpvariables/variables.php" ?>
+<?php
+    include "variables.php";
+    session_start();
+    error_reporting(0);
+    if ($_SESSION['userLoggedIn'] != "") {
+        header("Location: praesentium.php");
+    }
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +18,8 @@
     <script src="assets/js/script.js" defer></script>
 </head>
 <body>
-    <?php include "pagesection/mobilenavigationsection.php"; ?>
-    <?php include "pagesection/headersection.php"; ?>
+    <?php include "mobilenav.php"; ?>
+    <?php include "header.php"; ?>
     <div class="homeSection">
         <div class="titleSection">
             <h1 class="titleTitle">Sed ut perspiciatis unde omnis iste natus error sit voluptatem sit amet tempor</h1>
@@ -123,7 +130,7 @@
                 <p class="registrationFormInputMessage">Please accept the Terms and Conditions.</p>
                 <div class="registrationFormSubmitContainer">
                     <span class="registrationFormSubmit" onclick="registrationFormSubmitValidator()">Submit</span>
-                    <button class="registrationFormSubmit" type="submit" name="signupSubmit"style="display: none;">Real Submit</button>
+                    <button class="registrationFormSubmit" type="submit" name="signupSubmit" style="display: none;">Real Submit</button>
                 </div>
             </form>
             <img src="assets/images/cards.png" alt="7 11 cards" class="registrationCards">
@@ -140,10 +147,10 @@
                     <p class="registrationSubmittedTitle">Successfuly registered</p>
                 </div>
             </div>
-            <?php include "pagephpvariables/signup.php" ?>
+            <?php include "signup.php" ?>
         </div>
     </div>
-    <?php include "pagesection/searchsection.php"; ?>
-    <?php include "pagesection/footersection.php"; ?>
+    <?php include "search.php"; ?>
+    <?php include "footer.php"; ?>
 </body>
 </html>
