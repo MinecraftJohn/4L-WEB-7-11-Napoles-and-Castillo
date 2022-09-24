@@ -1,16 +1,20 @@
-<h2>The 7-Eleven Web Project Repository</h2>
-<a href="https://minecraftjohn.github.io/WEB-7-Eleven/" target="_blank" rel="noopener noreferrer">
-     <img src="https://raw.githubusercontent.com/MinecraftJohn/pinoylifecraft.com/1e9142fe524a13191ae19244be5da81daa016bf9/resources/repositry-status/repository-status-active.svg">
-</a>
+<h2>7 Eleven (School Performance Project)</h2>
+This project is a school performance project for subject Software Development 244 and WEB 241. Its core purpose is to discover something new and improve my web development skill.
+<br><br>
+<kbd>
+     <img src="https://raw.githubusercontent.com/MinecraftJohn/MinecraftJohn/main/assets/other-repository/7-eleven/preview%20screenshot.png" alt="Repository Preview Screenshot">
+</kbd>
+<br><br>
+This was my first web development for a school performance task. The page output and its assets are given to us, so it's up to me how to imitate the expected output using CSS. The UX was based on my imagination including the form validation message. As time goes by we have made it to dive into back-end. Using XAMPP I was able to run a local server and database.
+<br><br>
+It was a greate experience, challenging and fun web development exercise. Making a project indeed needs a team colaboration, especially a project like this.
+<br><br>
+<p><b>Languages used</b></p>
+<span><img src="https://raw.githubusercontent.com/MinecraftJohn/MinecraftJohn/0b7814e44ddd80c4105d8d3c98edba4f90d62f34/assets/svg/html.svg" alt="HTML"></span>
+<span><img src="https://raw.githubusercontent.com/MinecraftJohn/MinecraftJohn/0b7814e44ddd80c4105d8d3c98edba4f90d62f34/assets/svg/css.svg" alt="CSS"></span>
+<span><img src="https://raw.githubusercontent.com/MinecraftJohn/MinecraftJohn/7b446cb89db20f0427ca35571531cb42b038b3aa/assets/svg/javascript.svg" alt="JavaScript"></span>
+<span><img src="https://raw.githubusercontent.com/MinecraftJohn/MinecraftJohn/0b7814e44ddd80c4105d8d3c98edba4f90d62f34/assets/svg/php.svg" alt="PHP"></span>
+<span><img src="https://raw.githubusercontent.com/MinecraftJohn/MinecraftJohn/0b7814e44ddd80c4105d8d3c98edba4f90d62f34/assets/svg/mysql.svg" alt="MySQL"></span>
 <br>
-<br>
-Site: http://minecraftjohn-7eleven.epizy.com/<br>
-<br>
-<img src="https://github.com/MinecraftJohn/WEB-711/blob/4L-WEB-7/11/assets/images/repository-webpreview.png?raw=true">
-This project is for my school subject Software Development 244 and WEB 241<br>
-<br>
-This is my first web project in school. In this project they will see a registration page with header and footer on it. The registration form has a validation system where they can't submit the form is the input is empty or invalid. This project helps me earn more knowledge about scripting, it was hard and thanks a lot to stack overflow community. The UI of this project was based on my professor's PDF sample.<br>
-<br>
-I plan on adding a database on it and dive on to back-end as it is required by the professor. The 7-Eleven project is a great web exercise to me, I am looking forward for more discovery and fun experience.<br>
 <br>
 This project is maintained by <a href="https://github.com/MinecraftJohn" target="_blank" rel="noopener noreferrer">John Napoles</a> and is open to contributions!
