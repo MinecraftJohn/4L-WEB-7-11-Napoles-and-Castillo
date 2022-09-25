@@ -2,7 +2,7 @@
 This project is a school performance project for subject Software Development 244 and WEB 241. Its core purpose is to discover something new and improve my web development skill.
 <br><br>
 <kbd>
-     <img src="https://raw.githubusercontent.com/MinecraftJohn/MinecraftJohn/main/assets/other-repository/7-eleven/preview%20screenshot.png" alt="Repository Preview Screenshot">
+     <img src="https://raw.githubusercontent.com/MinecraftJohn/MinecraftJohn/main/assets/other-repository/7-eleven/7-eleven%20web%20preview.png" alt="Repository Preview Screenshot">
 </kbd>
 <br><br>
 This was my first web development for a school performance task. The page output and its assets are given to us, so it's up to me how to imitate the expected output using CSS. The UX was based on my imagination including the form validation message. As time goes by we have made it to dive into back-end. Using XAMPP I was able to run a local server and database.
